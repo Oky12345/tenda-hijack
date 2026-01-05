@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>TENDA 50% HIJACK</title>
+<style>
+body {background: #000; color: #0f0; font-family: monospace;}
+button {background: red; color: white; padding: 15px; margin: 10px; border: none; font-size: 18px;}
+</style>
+</head>
+<body>
+    <h1>💀 TENDA 50% BANDWIDTH HIJACK</h1>
+    <h3>Target: F670L (192.168.1.1)</h3>
+    
+    <button onclick="start50()">🔥 ACTIVATE 50% HIJACK</button>
+    <button onclick="force50()">⚡ FORCE 50% BANDWIDTH</button>
+    <button onclick="maxPower()">🧨 MAXIMUM POWER (80%)</button>
+    
+    <script>
+        const API = 'https://tenda-hijack.YOUR_ACCOUNT.workers.dev';
+        
+        async function start50() {
+            await fetch(API + '/start');
+            alert('🔥 50% BANDWIDTH HIJACK ACTIVATED!\nF670L bandwidth now shared 50% to Tenda!');
+        }
+        
+        async function force50() {
+            await fetch(API + '/50percent');
+            alert('✅ 50% bandwidth enforced!\nOther devices throttled to 1Mbps!');
+        }
+        
+        async function maxPower() {
+            await fetch(API + '/adjust?bw=80');
+            alert('🧨 MAXIMUM POWER!\nTenda taking 80% bandwidth!');
+        }
+    </script>
+</body>
+</html>
